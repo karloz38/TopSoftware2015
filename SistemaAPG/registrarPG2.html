@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Materias</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="style/estilo.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+		   <div class="row">
+		   	  <div class="col-xs-3 col-md-3">
+		   	  	<img src="imagen/logoUmss.png" class="img-responsive"	alt="">
+		   	  </div>
+		   	  <div class="col-xs-9 col-md-9">
+		   	    <h1>Sistema de Gestion de De Planes Globales</h1>	
+		   	  </div>
+		   </div>
+			
+		</div>
+	</header>
+	<section class="main row">
+	<br>
+	 <nav id="menu" class="col-xs-12 col-sm-4 col-md-3">
+	  <div class="container-fluid">
+		 <div class="row">
+		   	  	<ul class="nav nav-pills nav-stacked">
+		   	  		<li role="presentation"class="active"><a href="index.html">Inicio</a></li>
+		   	  		<li role="presentation"><a href="#">Facultades</a></li>
+		   	  		<li role="presentation"><a href="#">Carreras</a></li>
+		   	  		<li role="presentation"><a href="#">Planes de Estudio</a></li>
+		   	  		<li role="presentation"><a href="Materia.html">Materias</a></li>
+		   	  		<li role="presentation"><a href="#">Planes Globales</a></li>
+		   	  	</ul>
+		 </div>
+	  </div>
+	 </nav>
+     <article class="col-xs-12 col-sm-8 col-md-9">
+     	<div class=contaniner-fluid>
+     		
+     		 <!-- registro de plan global-->
+     		<div class="panel panel-default">
+     	      <div class="panel-body">
+     			 <h1><strong><center>Registrar Plan global</center></strong></h1>
+         		 
+         		 <form>
+					 <fieldset>
+					 	<legend>Datos de Identificacion</legend>
+                         <div class="form-group">
+                    	   <center> <label for="codigo"><h2>Carga Horaria</h2></label></center>
+                         </div>
+                         <strong><h3>Seleccione los items que entraran en su descripcion</h3></strong>
+                      
+
+                         <strong><h3>Ingrese los docentes que participaran en este plan</h3></strong>
+                         <table class="table">
+                         	<tr>
+                         		<th>Docentes totales en las materia</th>
+                         		<th></th>
+                         		<th>Docentes en el plan Global</th>
+                         	</tr>
+                         	<tr>
+                         	   <td>
+                         	   	<select name="gruposMateria" id="sel3" style="width:250px" size="6">
+                         	   		<option value="1">Lic. Leticia Blanco</option>
+                         	   		<option value="2">Lic. Rosmary Torrico</option>
+                         	   	</select>
+                         	   <script language="javascript">
+							    function pasar(de,a) {
+								obj=document.getElementById(de);
+								obj2=document.getElementById(a);
+		
+						       for (i=0; opt=obj.options[i]; i++)
+    							if (opt.selected) {
+							    	valor=opt.value; // almacenar value
+							    	txt=obj.options[i].text; // almacenar el texto
+    	
+										if (obj.options.length==1){
+											obj.options[i].text="-";	
+											obj.options[i].value="-";	
+										}else{
+											obj.focus();
+											obj.options[i]=null;			
+										}	 
+	  		
+      							if (obj2.options[0].value=='-') // si solo está la opción inicial borrarla
+							        obj2.options[0]=null;
+								
+								if(valor!='-'){
+						    		opc = new Option(txt,valor);
+					    			eval(obj2.options[obj2.options.length]=opc);
+								}
+							
+					         }
+							 
+							 if (obj.options.length<=0){
+								opc = new Option("-","");
+								eval(obj.options[0]=opc);
+								 return;
+							} 
+				           }
+						  
+						  </script>
+                         	   </td>
+                         	   
+                         	   <td>
+                         	   	<input type="button" name="pasarValor1" onclick="pasar('sel3','sel4')" value="-->>">
+                         	   	<br><br>
+                         	   	<input type="button" name="pasarValor2" onclick="pasar('sel4','sel3')" value="<<--">
+                         	   </td>
+
+                         	   <td>
+                         	   <span class="navArriba">
+                                 <select id="sel4" style="width:220px" size="6" name="carrera[]" multiple="multiple">
+                          
+                                 <option value="-">-</option></select>
+                               </span>
+                         	   </td>
+                         		
+                         	</tr>
+                         </table>
+                         <div class="form-group">
+                    	   <label for="telefono">Telefono:</label>
+                    	   <input class="form-control" type="text" id="nomMateria" >
+                         </div>
+                         <div class="form-group">
+                    	    <label for="correo">Correo:</label>
+                    	    <input class="form-control" type="text" id="nomMateria">
+                         </div>
+					 </fieldset>
+				 </form>
+     	       </div> 	     		   
+     		</div>
+     		<div class="container-fluid">
+     		 <nav>
+     			<ul class="pager">
+     				<li class="previous disable"><a href="registrarPG.html">&larr;anterior</a></li>
+     				<li class="next"><a href="registrarPG3.html">siguiente&rarr;</a></li>
+     			</ul>
+     		 </nav>
+     	   </div>
+
+     	</div>
+    </article>
+
+	</section>
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

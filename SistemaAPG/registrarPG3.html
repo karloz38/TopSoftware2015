@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Materias</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="style/estilo.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+		   <div class="row">
+		   	  <div class="col-xs-3 col-md-3">
+		   	  	<img src="imagen/logoUmss.png" class="img-responsive"	alt="">
+		   	  </div>
+		   	  <div class="col-xs-9 col-md-9">
+		   	    <h1>Sistema de Gestion de De Planes Globales</h1>	
+		   	  </div>
+		   </div>
+			
+		</div>
+	</header>
+	<section class="main row">
+	<br>
+	 <nav id="menu" class="col-xs-12 col-sm-4 col-md-3">
+	  <div class="container-fluid">
+		 <div class="row">
+		   	  	<ul class="nav nav-pills nav-stacked">
+		   	  		<li role="presentation"class="active"><a href="index.html">Inicio</a></li>
+		   	  		<li role="presentation"><a href="#">Facultades</a></li>
+		   	  		<li role="presentation"><a href="#">Carreras</a></li>
+		   	  		<li role="presentation"><a href="#">Planes de Estudio</a></li>
+		   	  		<li role="presentation"><a href="Materia.html">Materias</a></li>
+		   	  		<li role="presentation"><a href="#">Planes Globales</a></li>
+		   	  	</ul>
+		 </div>
+	  </div>
+	 </nav>
+     <article class="col-xs-12 col-sm-8 col-md-9">
+     	<div class=contaniner-fluid>
+     		
+     		 <!-- registro de plan global-->
+     		  <div class="panel panel-default">
+     	       <div class="panel-body">
+     			 <h1><strong><center>Registrar Plan global</center></strong></h1>
+         		 <strong><h2>JUSTIFICACION</h2></strong>
+                 <textarea class="form-control"name="" id="justificacion" cols="100" rows="10"></textarea>
+                 <br>
+                 <strong><h2>OBJETIVOS GENERALES</h2></strong>
+                 <form>
+                     <fieldset>
+                        <legend>Objetivo 1</legend>
+                         <div class="form-group">
+                          <label for="nombre">Titulo:</label>
+                          <input class="form-control" type="text" id="titulo">
+                         </div>
+                         <div class="form-group">
+                           <label for="codigo">Descripcion:</label>
+                           <textarea class="form-control"name="" id="descripcion" cols="100" rows="5"></textarea>
+                         </div>
+                     </fieldset>
+                </form>
+                <button class="submit btn btn-primary" type="submit">Añadir un objetivo</button>
+                <br>
+                <strong><h2>OBJETIVOS EXPECIFICOS</h2></strong>
+                <form>
+                     <fieldset>
+                        <legend>Objetivo 1</legend>
+                         <div class="form-group">
+                          <label for="nombre">Titulo:</label>
+                          <input class="form-control" type="text" id="titulo">
+                         </div>
+                         <div class="form-group">
+                           <label for="codigo">Descripcion:</label>
+                           <textarea class="form-control"name="" id="descripcion" cols="100" rows="5"></textarea>
+                         </div>
+                     </fieldset>
+                </form>
+                <button class="submit btn btn-primary" type="submit">Añadir un objetivo</button>
+
+        </div> 	     		   
+     		</div>
+     		<div class="container-fluid">
+     		<nav>
+     			<ul class="pager">
+     				<li class="previous disable"><a href="re">anterior</a></li>
+     				<li class="next"><a href="">siguiente</a></li>
+     			</ul>
+     		</nav>
+     	</div>
+
+     	</div>
+    </article>
+
+	</section>
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
